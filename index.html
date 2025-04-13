@@ -6,6 +6,16 @@
     <title>Unity WebGL Player | Zone Zero</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log("Telegram WebApp:", window.Telegram ? window.Telegram.WebApp : "Not available");
+        if (window.Telegram && window.Telegram.WebApp) {
+            window.Telegram.WebApp.ready();
+            console.log("WebApp initDataUnsafe:", window.Telegram.WebApp.initDataUnsafe);
+        }
+    });
+    </script>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
